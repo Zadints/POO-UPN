@@ -78,6 +78,26 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
         tblVigilantes = new javax.swing.JTable();
         btnEliminarVigilante = new javax.swing.JButton();
         btnActualizarVigilante = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        btnRegistrarBanda = new javax.swing.JButton();
+        txtNumeroBanda = new javax.swing.JTextField();
+        txtMiembrosBanda = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        txtCodigoDelincuente = new javax.swing.JTextField();
+        txtNombreDelincuente = new javax.swing.JTextField();
+        btnRegistrarDelincuente = new javax.swing.JButton();
+        cbxBandas = new javax.swing.JComboBox<>();
+        jLabel19 = new javax.swing.JLabel();
+        cbxSucursalesAtraco = new javax.swing.JComboBox<>();
+        jLabel20 = new javax.swing.JLabel();
+        txtFechaAtraco = new javax.swing.JTextField();
+        btnRegistrarAtraco = new javax.swing.JButton();
+        cbxDelincuentesAtraco = new javax.swing.JComboBox<>();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -90,8 +110,6 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
         jLabel6.setText("Banco Perteneciente:");
 
         txtCodigoSucursal.addActionListener(this::txtCodigoSucursalActionPerformed);
-
-        cbxBancos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         btnRegistrarSucursal.setText("Registrar Sucursal");
         btnRegistrarSucursal.addActionListener(this::btnRegistrarSucursalActionPerformed);
@@ -249,12 +267,6 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
 
         jLabel14.setText("Condición:");
 
-        cbxVigilantes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        cbxSucursalesContrato.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        cbxCondicionArma.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         btnContratarVigilante.setText("Asignar a Sucursal");
         btnContratarVigilante.addActionListener(this::btnContratarVigilanteActionPerformed);
 
@@ -389,6 +401,133 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Vigilantes y Contratos", jPanel4);
 
+        jLabel15.setText("Numero de banda:");
+
+        jLabel16.setText("Cantidad de miembros:");
+
+        btnRegistrarBanda.setText("Registrar Banda");
+        btnRegistrarBanda.addActionListener(this::btnRegistrarBandaActionPerformed);
+
+        jLabel17.setText("Codigo Delicuente: ");
+
+        jLabel18.setText("Nombre Delicuente:");
+
+        btnRegistrarDelincuente.setText("Registrar Delicuente");
+        btnRegistrarDelincuente.addActionListener(this::btnRegistrarDelincuenteActionPerformed);
+
+        jLabel19.setText("Para registrar atraco");
+
+        jLabel20.setText("Fecha atraco:");
+
+        btnRegistrarAtraco.setText("Registrar Atraco");
+        btnRegistrarAtraco.addActionListener(this::btnRegistrarAtracoActionPerformed);
+
+        jLabel21.setText("Delicuente");
+
+        jLabel22.setText("Sucursal");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel5Layout.createSequentialGroup()
+                                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txtMiembrosBanda))
+                                .addGroup(jPanel5Layout.createSequentialGroup()
+                                    .addComponent(jLabel15)
+                                    .addGap(56, 56, 56)
+                                    .addComponent(txtNumeroBanda, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addComponent(btnRegistrarAtraco))
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                    .addComponent(cbxDelincuentesAtraco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(27, 27, 27)
+                                    .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(cbxSucursalesAtraco, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel5Layout.createSequentialGroup()
+                                            .addGap(18, 18, 18)
+                                            .addComponent(txtFechaAtraco, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel5Layout.createSequentialGroup()
+                                            .addGap(27, 27, 27)
+                                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                            .addGap(114, 114, 114)
+                            .addComponent(btnRegistrarBanda))))
+                .addGap(118, 118, 118)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addComponent(jLabel17)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtCodigoDelincuente, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtNombreDelincuente)))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(cbxBandas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49)
+                        .addComponent(btnRegistrarDelincuente)))
+                .addContainerGap(57, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(txtNumeroBanda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17)
+                    .addComponent(txtCodigoDelincuente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(txtMiembrosBanda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18)
+                    .addComponent(txtNombreDelincuente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegistrarBanda)
+                    .addComponent(btnRegistrarDelincuente)
+                    .addComponent(cbxBandas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(64, 64, 64)
+                .addComponent(jLabel19)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxDelincuentesAtraco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxSucursalesAtraco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel22))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(txtFechaAtraco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addComponent(btnRegistrarAtraco)
+                .addContainerGap(102, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Registrar banda y delincuente", jPanel5);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -505,6 +644,7 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
         String empleadosStr = txtEmpleadosSucursal.getText();
 
         Object bancoSeleccionado = cbxBancos.getSelectedItem();
+        
 
         if (codigo.trim().isEmpty() || domicilio.trim().isEmpty() || empleadosStr.trim().isEmpty() || bancoSeleccionado == null) {
             JOptionPane.showMessageDialog(this, "Complete todos los campos y seleccione un banco.");
@@ -518,6 +658,7 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
             controller.registrarSucursal(codigo, domicilio, empleados, codigoBanco);
             JOptionPane.showMessageDialog(this, "Sucursal registrada con éxito.");
             cbxSucursalesContrato.addItem(codigo);
+            cbxSucursalesAtraco.addItem(codigo);
 
             txtCodigoSucursal.setText("");
             txtDomicilioSucursal.setText("");
@@ -596,7 +737,7 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
             
             if (actualizado) {
                 JOptionPane.showMessageDialog(this, "Vigilante actualizado con éxito.");
-                actualizarTablaVigilantes(); // Refrescamos la tabla para ver la nueva edad
+                actualizarTablaVigilantes(); 
                 
                 txtCodigoVigilante.setText("");
                 txtEdadVigilante.setText("");
@@ -608,6 +749,87 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "La edad debe ser un número entero.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnActualizarVigilanteActionPerformed
+
+    private void btnRegistrarBandaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarBandaActionPerformed
+        // TODO add your handling code here:
+        String numero = txtNumeroBanda.getText();
+        String miembrosStr = txtMiembrosBanda.getText();    
+        
+        if (numero.trim().isEmpty() || miembrosStr.trim().isEmpty()) {
+             JOptionPane.showMessageDialog(this, "Complete los datos de la banda.");
+             return;
+        }
+        
+        try {
+            int miembros = Integer.parseInt(miembrosStr);
+            controller.registrarBanda(numero, miembros);
+        
+            
+            cbxBandas.addItem(numero); 
+        
+            JOptionPane.showMessageDialog(this, "Banda registrada con éxito.");
+            txtNumeroBanda.setText("");
+            txtMiembrosBanda.setText("");
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "El número de miembros debe ser un valor entero.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnRegistrarBandaActionPerformed
+
+    private void btnRegistrarDelincuenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarDelincuenteActionPerformed
+        // TODO add your handling code here:
+        String codigo = txtCodigoDelincuente.getText();
+        String nombre = txtNombreDelincuente.getText();
+        Object bandaSeleccionada = cbxBandas.getSelectedItem();
+        
+        if (codigo.trim().isEmpty() || nombre.trim().isEmpty() || bandaSeleccionada == null) {
+           JOptionPane.showMessageDialog(this, "Complete todos los campos del delincuente.");
+           return;
+        }
+        
+        String numBanda = bandaSeleccionada.toString();
+        controller.registrarDelincuente(codigo, nombre, numBanda);
+        
+
+        cbxDelincuentesAtraco.addItem(codigo);
+        
+        JOptionPane.showMessageDialog(this, "Delincuente registrado con éxito.");
+        txtCodigoDelincuente.setText("");
+        txtNombreDelincuente.setText("");
+    }//GEN-LAST:event_btnRegistrarDelincuenteActionPerformed
+
+    private void btnRegistrarAtracoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarAtracoActionPerformed
+        // TODO add your handling code here:
+        Object delincuenteSeleccionado = cbxDelincuentesAtraco.getSelectedItem();
+        Object sucursalSeleccionada = cbxSucursalesAtraco.getSelectedItem();
+        
+        
+        if (delincuenteSeleccionado == null || sucursalSeleccionada == null) {
+            JOptionPane.showMessageDialog(this, "Por favor, seleccione un Delincuente y una Sucursal.");
+            return;
+        }
+        
+        String codDelincuente = delincuenteSeleccionado.toString();
+        String codSucursal = sucursalSeleccionada.toString();
+        
+        
+        String fecha = txtFechaAtraco.getText();
+        
+        if (fecha.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, ingrese la fecha del atraco.");
+            return;
+        }
+        
+        
+        boolean exito = controller.registrarAtraco(codDelincuente, codSucursal, fecha);
+        
+        if (exito) {
+            JOptionPane.showMessageDialog(this, "¡Atraco registrado con éxito!\nEl delincuente " + codDelincuente + " atracó la sucursal " + codSucursal + " el " + fecha + ".");
+            
+            txtFechaAtraco.setText(""); 
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al registrar el atraco.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnRegistrarAtracoActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -653,11 +875,17 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
     private javax.swing.JButton btnContratarVigilante;
     private javax.swing.JButton btnEliminarVigilante;
     private javax.swing.JButton btnGenerarReporte;
+    private javax.swing.JButton btnRegistrarAtraco;
     private javax.swing.JButton btnRegistrarBanco;
+    private javax.swing.JButton btnRegistrarBanda;
+    private javax.swing.JButton btnRegistrarDelincuente;
     private javax.swing.JButton btnRegistrarSucursal;
     private javax.swing.JButton btnRegistrarVigilante;
     private javax.swing.JComboBox<String> cbxBancos;
+    private javax.swing.JComboBox<String> cbxBandas;
     private javax.swing.JComboBox<String> cbxCondicionArma;
+    private javax.swing.JComboBox<String> cbxDelincuentesAtraco;
+    private javax.swing.JComboBox<String> cbxSucursalesAtraco;
     private javax.swing.JComboBox<String> cbxSucursalesContrato;
     private javax.swing.JComboBox<String> cbxVigilantes;
     private javax.swing.JLabel jLabel1;
@@ -666,7 +894,15 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -678,18 +914,24 @@ public class SistemaSeguridadPolicial extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable tblVigilantes;
     private javax.swing.JTextArea txtAreaReporte;
     private javax.swing.JTextField txtCodigoBanco;
+    private javax.swing.JTextField txtCodigoDelincuente;
     private javax.swing.JTextField txtCodigoSucursal;
     private javax.swing.JTextField txtCodigoVigilante;
     private javax.swing.JTextField txtDomicilioBanco;
     private javax.swing.JTextField txtDomicilioSucursal;
     private javax.swing.JTextField txtEdadVigilante;
     private javax.swing.JTextField txtEmpleadosSucursal;
+    private javax.swing.JTextField txtFechaAtraco;
     private javax.swing.JTextField txtFechaContrato;
+    private javax.swing.JTextField txtMiembrosBanda;
+    private javax.swing.JTextField txtNombreDelincuente;
+    private javax.swing.JTextField txtNumeroBanda;
     // End of variables declaration//GEN-END:variables
 }
