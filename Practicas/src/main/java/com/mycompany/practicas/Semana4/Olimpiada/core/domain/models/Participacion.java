@@ -4,26 +4,35 @@
  */
 package com.mycompany.practicas.Semana4.Olimpiada.core.domain.models;
 import com.mycompany.practicas.Semana4.Olimpiada.core.domain.enums.ComisarioRol;
-
 /**
  *
  * @author AUGUSTO RODRIGUEZ
  */
 public class Participacion {
-    private Comisario comisario;
     private ComisarioRol rol;
-
-    public Participacion(Comisario comisario, ComisarioRol rol) {
-        this.comisario = comisario;
+    private Comisario comisarioParticipacion;
+    private String idEvn;
+    
+    public Participacion( ComisarioRol rol, String idEvn, Comisario comisarioParticipacion) {
         this.rol = rol;
-    }
-
-    public Comisario getComisario() {
-        return comisario;
+        this.idEvn = idEvn;
+        this.comisarioParticipacion = comisarioParticipacion;
     }
 
     public ComisarioRol getRol() {
         return this.rol;
     }    
+    
+    public String getUuidEvento(){
+        return idEvn;
+    }
+
+    public Comisario getComisarioParticipacion() {
+        return comisarioParticipacion;
+    }
+
+    public String getIdEvn() {
+        return idEvn;
+    }
     
 }

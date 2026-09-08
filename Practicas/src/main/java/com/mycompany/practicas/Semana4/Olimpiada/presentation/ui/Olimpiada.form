@@ -23,19 +23,19 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="15" max="32767" attributes="0"/>
-              <Component id="jTabbedPane1" min="-2" pref="486" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane1" pref="766" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" min="-2" pref="471" max="-2" attributes="0"/>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" min="-2" pref="540" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -62,33 +62,29 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="label13" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtDescripcionArea" min="-2" pref="252" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="btnEliminarArea" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="label28" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="cbxAreasEliminar" max="32767" attributes="0"/>
+                                  <Component id="label13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDescripcionArea" alignment="0" pref="252" max="32767" attributes="0"/>
+                                  <Component id="btnCrearArea" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtLocalizacionArea" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="label12" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNombreArea" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace pref="103" max="32767" attributes="0"/>
-                                      <Component id="btnCrearArea" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="22" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="txtLocalizacionArea" alignment="0" pref="178" max="32767" attributes="0"/>
-                                          <Component id="label14" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="label12" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="396" max="32767" attributes="0"/>
+                              <Component id="label29" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace pref="82" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="label15" min="-2" pref="178" max="-2" attributes="0"/>
+                          <Component id="lstAreasLista" min="-2" pref="398" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -96,22 +92,43 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="label12" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="label15" min="-2" max="-2" attributes="0"/>
+                          <Component id="label28" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label13" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="label14" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="txtLocalizacionArea" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="btnCrearArea" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="label12" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="label14" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtNombreArea" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="label29" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                      <Component id="txtLocalizacionArea" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="15" max="32767" attributes="0"/>
+                                      <Component id="label13" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtDescripcionArea" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnCrearArea" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="cbxAreasEliminar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnEliminarArea" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="txtDescripcionArea" max="32767" attributes="0"/>
+                          <Component id="lstAreasLista" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="274" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -132,373 +149,85 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Crear &#xc1;rea"/>
               </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Eliminar &#xc1;rea"/>
+              </AccessibilityProperties>
             </Component>
             <Component class="java.awt.Label" name="label13">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ingresa la descripci&#xf3;n del &#xe1;rea"/>
               </Properties>
             </Component>
+            <Component class="java.awt.Label" name="label14">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ingresanombre del &#xe1;rea"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Ingresa nombre del &#xe1;rea"/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtLocalizacionArea">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Av Am&#xe9;rica"/>
+              </Properties>
+            </Component>
+            <Component class="java.awt.Label" name="label15">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&#xc1;reas creadas"/>
+              </Properties>
+            </Component>
             <Component class="javax.swing.JTextField" name="txtDescripcionArea">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField6"/>
+                <Property name="text" type="java.lang.String" value="Una &#xe1;rea para..."/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
               </AuxValues>
             </Component>
-            <Component class="java.awt.Label" name="label14">
+            <Component class="java.awt.Label" name="label28">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Crear &#xc1;rea"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnEliminarArea">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Eliminar &#xe1;rea seleccionada"/>
+                <Property name="actionCommand" type="java.lang.String" value="Eliminar &#xe1;rea seleccionada"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarAreaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbxAreasEliminar">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Area&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNombreArea">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Area 1"/>
+              </Properties>
+            </Component>
+            <Component class="java.awt.Label" name="label29">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ingresa la localizaci&#xf3;n del &#xe1;rea"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtLocalizacionArea">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField1"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel4">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Comisario">
-                <Property name="tabTitle" type="java.lang.String" value="Comisario"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="label17" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="142" max="32767" attributes="0"/>
-                              <Component id="btnCrearComisario" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtNombreComisario" alignment="0" min="-2" pref="252" max="-2" attributes="0"/>
-                                  <Component id="label16" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="label19" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="cbxComisarios" max="32767" attributes="0"/>
-                                          <Component id="label20" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnEliminar" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="label16" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label17" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnCrearComisario" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtNombreComisario" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                      <Component id="label19" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="label20" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnEliminar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbxComisarios" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="183" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="java.awt.Label" name="label16">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="12" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Crear Comisario"/>
-              </Properties>
-            </Component>
-            <Component class="java.awt.Label" name="label17">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ingresa el nombre del comisario"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtNombreComisario">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField6"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnCrearComisario">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Crear Comisario"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearComisarioActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="java.awt.Label" name="label19">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="12" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Eliminar Comisario"/>
-              </Properties>
-            </Component>
-            <Component class="java.awt.Label" name="label20">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Selecciona el comisario a eliminar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnEliminar">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Eliminar"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cbxComisarios">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Comisario&gt;"/>
-              </AuxValues>
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel5">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Evento">
-                <Property name="tabTitle" type="java.lang.String" value="Evento"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="caInicioEvento" alignment="1" min="-2" pref="210" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="label21" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="label23" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="label22" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="caFinalEvento" min="-2" pref="217" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label26" min="-2" max="-2" attributes="0"/>
-                          <Component id="label25" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNumParticipantes" min="-2" pref="190" max="-2" attributes="0"/>
-                          <Component id="label24" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="lstComisariosSeleccionados" min="-2" pref="218" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="366" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="cbxRolComisario" min="-2" pref="170" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="cbxEventoComsiarios" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="btnAddComisarioS" min="-2" pref="35" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="367" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="btnAddEventoComisarios" min="-2" pref="42" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                              <Component id="btnCrearEvento" min="-2" pref="166" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="label21" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label22" min="-2" max="-2" attributes="0"/>
-                          <Component id="label24" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="txtNumParticipantes" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="label25" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Component id="btnAddEventoComisarios" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="cbxEventoComsiarios" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="btnAddComisarioS" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="lstComisariosSeleccionados" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="label26" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="cbxRolComisario" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="10" max="32767" attributes="0"/>
-                              <Component id="btnCrearEvento" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="caInicioEvento" min="-2" pref="107" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="label23" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="caFinalEvento" min="-2" pref="111" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="java.awt.Label" name="label21">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="12" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Crear Evento"/>
-              </Properties>
-            </Component>
-            <Component class="java.awt.Label" name="label22">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ingresa la fecha del evento"/>
-              </Properties>
-            </Component>
-            <Component class="com.toedter.calendar.JCalendar" name="caFinalEvento">
-            </Component>
-            <Component class="java.awt.Label" name="label23">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ingrese cuando termina evento"/>
-              </Properties>
-            </Component>
-            <Component class="com.toedter.calendar.JCalendar" name="caInicioEvento">
-            </Component>
-            <Component class="java.awt.Label" name="label24">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ingresa n&#xfa;meros de participantes"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtNumParticipantes">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="2"/>
-              </Properties>
-            </Component>
-            <Component class="java.awt.Label" name="label25">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Selecciona los comisarios"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cbxEventoComsiarios">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxEventoComsiariosActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Comisario&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="java.awt.List" name="lstComisariosSeleccionados">
+            <Component class="java.awt.List" name="lstAreasLista">
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
               </AuxValues>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnAddEventoComisarios">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddEventoComisariosActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnCrearEvento">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Crear Evento"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearEventoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cbxRolComisario">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.enums.ComisarioRol&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="java.awt.Label" name="label26">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Secciona el rol"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnAddComisarioS">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddComisarioSActionPerformed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -559,11 +288,12 @@
                                       <Component id="cbxAreasComplejo" min="-2" pref="142" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="btnAreasComplejo" min="-2" pref="46" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="lstAreasSeleccionadasComplejo" min="-2" pref="265" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="365" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -572,7 +302,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="label11" min="-2" pref="129" max="-2" attributes="0"/>
-                          <EmptySpace pref="352" max="32767" attributes="0"/>
+                          <EmptySpace pref="758" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -591,11 +321,11 @@
                           <Component id="txtLocalizacionComplejo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="label9" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                      <Component id="txtJefeIndividual" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
+                              <Component id="label9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Component id="txtJefeIndividual" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               <Component id="label10" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -603,14 +333,10 @@
                                   <Component id="cbxAreasComplejo" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnAreasComplejo" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="21" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="lstAreasSeleccionadasComplejo" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="lstAreasSeleccionadasComplejo" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace pref="90" max="32767" attributes="0"/>
                       <Component id="label18" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -633,7 +359,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="label11" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="386" max="32767" attributes="0"/>
+                          <EmptySpace pref="455" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -754,32 +480,32 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="label1" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
-                                  <Component id="txtNombreSede" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
-                                  <Component id="txtPresupuestoSede" alignment="1" min="-2" pref="203" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                               <Component id="label2" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btnCrearSede" min="-2" pref="151" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="label1" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
+                                      <Component id="txtNombreSede" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
+                                      <Component id="txtPresupuestoSede" alignment="1" min="-2" pref="203" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label3" pref="245" max="32767" attributes="0"/>
+                          <Component id="label3" pref="525" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="btnCrearSede" min="-2" pref="151" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="lstComplejosSede" min="-2" pref="218" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="cbxListComplejosSede" max="32767" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="btnAddSede" min="-2" pref="42" max="-2" attributes="0"/>
-                                      </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lstComplejosSede" min="-2" pref="218" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="cbxListComplejosSede" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnAddSede" min="-2" pref="42" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -814,22 +540,22 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="95" max="32767" attributes="0"/>
                               <Component id="label2" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="txtPresupuestoSede" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="lstComplejosSede" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="btnCrearSede" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                           <Component id="label4" min="-2" pref="20" max="-2" attributes="0"/>
-                          <EmptySpace pref="362" max="32767" attributes="0"/>
+                          <EmptySpace pref="431" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -892,6 +618,437 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearSedeActionPerformed"/>
               </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel4">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Comisario">
+                <Property name="tabTitle" type="java.lang.String" value="Comisario"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="txtNombreComisario" min="-2" pref="277" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="cbxComisariosMostrar" min="-2" pref="192" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="btnComisariosMostrar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="label16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="label17" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                              <Component id="label19" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="cbxComisarios" max="32767" attributes="0"/>
+                                                      <Component id="label20" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="btnEliminar" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="btnCrearComisario" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="txtApellidoComisario" alignment="1" min="-2" pref="277" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="label32" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="label31" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="label27" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lstComisariosParticipaciones" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblParticipacionesComisario" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="label16" min="-2" max="-2" attributes="0"/>
+                          <Component id="label27" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="label17" min="-2" max="-2" attributes="0"/>
+                          <Component id="label31" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="lblParticipacionesComisario" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtNombreComisario" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbxComisariosMostrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnComisariosMostrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label32" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lstComisariosParticipaciones" min="-2" pref="326" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="txtApellidoComisario" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                              <Component id="btnCrearComisario" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="label19" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="label20" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cbxComisarios" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEliminar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="java.awt.Label" name="label16">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Crear Comisario"/>
+              </Properties>
+            </Component>
+            <Component class="java.awt.Label" name="label17">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ingresa el nombre del comisario"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNombreComisario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Juarez"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnCrearComisario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear Comisario"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearComisarioActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="java.awt.Label" name="label19">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Eliminar Comisario"/>
+              </Properties>
+            </Component>
+            <Component class="java.awt.Label" name="label20">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Selecciona el comisario a eliminar"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnEliminar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Eliminar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbxComisarios">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Comisario&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="java.awt.Label" name="label27">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Informaci&#xf3;n"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbxComisariosMostrar">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Comisario&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnComisariosMostrar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mostrar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnComisariosMostrarActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="java.awt.Label" name="lblParticipacionesComisario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Comisario: 0 | participaciones: 0"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Comisario: participaciones:"/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="java.awt.List" name="lstComisariosParticipaciones">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+              </AuxValues>
+            </Component>
+            <Component class="java.awt.Label" name="label31">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Selecciona el comisario a mostrar toda su informacion y participaci&#xf3;n"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtApellidoComisario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pinillos del Carmen"/>
+              </Properties>
+            </Component>
+            <Component class="java.awt.Label" name="label32">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ingresa los apellidos del comisario"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel5">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Evento">
+                <Property name="tabTitle" type="java.lang.String" value="Evento"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="caInicioEvento" alignment="1" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label21" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label23" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label22" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="caFinalEvento" alignment="0" min="-2" pref="217" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="label24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtNumParticipantes" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="label26" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                                                  <Component id="label25" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="cbxRolComisario" min="-2" pref="170" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="cbxEventoComsiarios" min="-2" pref="254" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="btnAddComisario" min="-2" pref="59" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="lstComisariosSeleccionados" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="btnCrearEvento" min="-2" pref="166" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="label21" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="label22" min="-2" max="-2" attributes="0"/>
+                          <Component id="label24" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="caInicioEvento" min="-2" pref="117" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label23" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="caFinalEvento" min="-2" pref="123" max="-2" attributes="0"/>
+                              <EmptySpace pref="138" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtNumParticipantes" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="label26" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label25" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cbxRolComisario" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbxEventoComsiarios" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnAddComisario" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lstComisariosSeleccionados" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="btnCrearEvento" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="java.awt.Label" name="label21">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Crear Evento"/>
+              </Properties>
+            </Component>
+            <Component class="java.awt.Label" name="label22">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ingresa la fecha del evento"/>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JCalendar" name="caFinalEvento">
+            </Component>
+            <Component class="java.awt.Label" name="label23">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ingrese cuando termina evento"/>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JCalendar" name="caInicioEvento">
+            </Component>
+            <Component class="java.awt.Label" name="label24">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ingresa n&#xfa;meros de participantes"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNumParticipantes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="2"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+              </AuxValues>
+            </Component>
+            <Component class="java.awt.Label" name="label25">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Selecciona el comisario"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbxEventoComsiarios">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxEventoComsiariosActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Comisario&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnCrearEvento">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear Evento"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearEventoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbxRolComisario">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.enums.ComisarioRol&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="java.awt.Label" name="label26">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Secciona el rol"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnAddComisario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="+"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddComisarioActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="java.awt.List" name="lstComisariosSeleccionados">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>

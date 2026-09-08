@@ -4,7 +4,6 @@
  */
 package com.mycompany.practicas.Semana4.Olimpiada.core.domain.models;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 /**
  *
@@ -16,10 +15,10 @@ public class Evento {
     private LocalDateTime fechaTermina;
     private long duracion;
     private int participantes;
-    private List<Participacion> comisarios;
+    private List<Comisario> comisarios;
 
 
-    public Evento(String idEvento, LocalDateTime fechaInicia, LocalDateTime fechaTermina, long duracion, int participantes, List<Participacion> comisarios) {
+    public Evento(String idEvento, LocalDateTime fechaInicia, LocalDateTime fechaTermina, long duracion, int participantes, List<Comisario> comisarios) {
         this.idEvento = idEvento;
         this.fechaInicia = fechaInicia;
         this.fechaTermina = fechaTermina;
@@ -49,7 +48,7 @@ public class Evento {
         return participantes;
     }
 
-    public List<Participacion> getComisarios() {
+    public List<Comisario> getComisarios() {
         return comisarios;
     }
     

@@ -10,18 +10,24 @@ import java.util.List;
  * @author AUGUSTO RODRIGUEZ
  */
 public class Complejo {
+    private String nombre;
     private String idComplejo;
     private String localizacion;
     private String jefeOrganizacion;
     private List<Area> areas;
     private List<Evento> eventos;
 
-    public Complejo(String idComplejo, String localizacion, String jefeOrganizacion, List<Area> areas, List<Evento> eventos ) {
+    public Complejo(String nombre, String idComplejo, String localizacion, String jefeOrganizacion, List<Area> areas, List<Evento> eventos ) {
         this.idComplejo = idComplejo;
         this.localizacion = localizacion;
         this.jefeOrganizacion = jefeOrganizacion;
         this.areas = areas;
         this.eventos = eventos;
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public String getIdComplejo() {
@@ -44,7 +50,10 @@ public class Complejo {
         return eventos;
     }
 
- 
+    @Override
+    public String toString(){
+        return this.idComplejo;
+    }
     
 }
 
