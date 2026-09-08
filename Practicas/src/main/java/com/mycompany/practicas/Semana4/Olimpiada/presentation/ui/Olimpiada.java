@@ -25,16 +25,18 @@ import com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.*;
 public class Olimpiada extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Olimpiada.class.getName());
-    private List<Sede> tempSedes = new ArrayList();
+    
     private final IdGeneradorUseCase UUIDGenerador;
     private List<Participacion> tempComisarios = new ArrayList();
-    private List<Evento> tempEventos = new ArrayList();
-    private List<Area> tempAreas = new ArrayList();
-    private List<Complejo> tempComplejos = new ArrayList();
+   
+    
     private List<Comisario> comisariosSeleccionadosEvento = new ArrayList();
     
-    
-    
+    //Estos atributos es para crear la sede de comisarios en 
+    private List<Complejo> selectComplejosSede = new ArrayList();
+    //Estos atributos es para crear el complejo de comisarios en 
+    private List<Evento> selectEventosComplejo = new ArrayList();
+    private List<Area> selectAreasComplejo = new ArrayList();  
     //Este atributo es para crear la participacion de comisarios en 
     //btnAddComisarioActionPerformed() :DDD
     private List<Participacion> partiComisarioCrearEvento = new ArrayList();
@@ -72,23 +74,6 @@ public class Olimpiada extends javax.swing.JFrame {
         txtNombreArea = new javax.swing.JTextField();
         label29 = new java.awt.Label();
         lstAreasLista = new java.awt.List();
-        jPanel2 = new javax.swing.JPanel();
-        label7 = new java.awt.Label();
-        txtNombreComplejo = new javax.swing.JTextField();
-        label8 = new java.awt.Label();
-        txtLocalizacionComplejo = new javax.swing.JTextField();
-        label9 = new java.awt.Label();
-        txtJefeIndividual = new javax.swing.JTextField();
-        cbxAreasComplejo = new javax.swing.JComboBox<>();
-        btnAreasComplejo = new javax.swing.JButton();
-        label10 = new java.awt.Label();
-        label11 = new java.awt.Label();
-        btnCrearComplejo = new javax.swing.JButton();
-        cbxEventosComplejo = new javax.swing.JComboBox<>();
-        btnAddEventoComplejo = new javax.swing.JButton();
-        lstEventosComplejo = new java.awt.List();
-        label18 = new java.awt.Label();
-        lstAreasSeleccionadasComplejo = new java.awt.List();
         jPanel1 = new javax.swing.JPanel();
         label1 = new java.awt.Label();
         txtNombreSede = new javax.swing.JTextField();
@@ -100,6 +85,8 @@ public class Olimpiada extends javax.swing.JFrame {
         label4 = new java.awt.Label();
         txtPresupuestoSede = new javax.swing.JTextField();
         btnCrearSede = new javax.swing.JButton();
+        lstSedesCreadas = new java.awt.List();
+        label5 = new java.awt.Label();
         jPanel4 = new javax.swing.JPanel();
         label16 = new java.awt.Label();
         label17 = new java.awt.Label();
@@ -132,6 +119,27 @@ public class Olimpiada extends javax.swing.JFrame {
         label26 = new java.awt.Label();
         btnAddComisario = new javax.swing.JButton();
         lstComisariosSeleccionados = new java.awt.List();
+        label33 = new java.awt.Label();
+        txtEventoTitle = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        label7 = new java.awt.Label();
+        txtNombreComplejo = new javax.swing.JTextField();
+        label8 = new java.awt.Label();
+        txtLocalizacionComplejo = new javax.swing.JTextField();
+        label9 = new java.awt.Label();
+        txtJefeIndividualComplejo = new javax.swing.JTextField();
+        cbxSelecAreasComplejo = new javax.swing.JComboBox<>();
+        btnAreasComplejo = new javax.swing.JButton();
+        label10 = new java.awt.Label();
+        label11 = new java.awt.Label();
+        cbxSelecEventosComplejo = new javax.swing.JComboBox<>();
+        btnAddEventoComplejo = new javax.swing.JButton();
+        lstSelecEventosComplejo = new java.awt.List();
+        label18 = new java.awt.Label();
+        btnCrearComplejo = new javax.swing.JButton();
+        label30 = new java.awt.Label();
+        lstSelectAreasComplejo = new java.awt.List();
+        lstComplejosCreados = new java.awt.List();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -158,7 +166,6 @@ public class Olimpiada extends javax.swing.JFrame {
         label28.setText("Crear Área");
 
         btnEliminarArea.setText("Eliminar área seleccionada");
-        btnEliminarArea.setActionCommand("Eliminar área seleccionada");
         btnEliminarArea.addActionListener(this::btnEliminarAreaActionPerformed);
 
         txtNombreArea.setText("Area 1");
@@ -214,7 +221,7 @@ public class Olimpiada extends javax.swing.JFrame {
                                 .addComponent(label29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(1, 1, 1)
                                 .addComponent(txtLocalizacionArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                                 .addComponent(label13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtDescripcionArea, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -233,137 +240,8 @@ public class Olimpiada extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Área", jPanel3);
 
-        label7.setText("Ingresa el nombre del complejo a crear:");
-
-        txtNombreComplejo.setText("Ejemplocomplejo");
-        txtNombreComplejo.addActionListener(this::txtNombreComplejoActionPerformed);
-
-        label8.setText("Ingresa la localización del complejo a crear:");
-
-        txtLocalizacionComplejo.setText("Av. ...");
-        txtLocalizacionComplejo.addActionListener(this::txtLocalizacionComplejoActionPerformed);
-
-        label9.setText("Ingresa el nombre de un jefe de organización individual");
-
-        txtJefeIndividual.setText("Ejemplocomplejo");
-
-        btnAreasComplejo.setText("+");
-        btnAreasComplejo.addActionListener(this::btnAreasComplejoActionPerformed);
-
-        label10.setText("Asigna las áreas a ocupar");
-
-        label11.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        label11.setText("Crea complejo");
-
-        btnCrearComplejo.setText("Crear Complejo");
-        btnCrearComplejo.setActionCommand("");
-        btnCrearComplejo.addActionListener(this::btnCrearComplejoActionPerformed);
-
-        btnAddEventoComplejo.setText("+");
-        btnAddEventoComplejo.addActionListener(this::btnAddEventoComplejoActionPerformed);
-
-        label18.setText("Selecciona eventos");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(label7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtNombreComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtLocalizacionComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addComponent(txtJefeIndividual)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(label9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnCrearComplejo))
-                            .addComponent(label18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(cbxEventosComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnAddEventoComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lstEventosComplejo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(cbxAreasComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnAreasComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(53, 53, 53)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lstAreasSeleccionadasComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(365, 365, 365)))
-                .addContainerGap())
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(label11, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(758, Short.MAX_VALUE)))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNombreComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtLocalizacionComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(label9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)
-                        .addComponent(txtJefeIndividual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(label10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbxAreasComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAreasComplejo)))
-                    .addComponent(lstAreasSeleccionadasComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
-                .addComponent(label18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnAddEventoComplejo)
-                            .addComponent(cbxEventosComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(23, 23, 23))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(lstEventosComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(btnCrearComplejo)
-                .addGap(80, 80, 80))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(30, 30, 30)
-                    .addComponent(label11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(455, Short.MAX_VALUE)))
-        );
-
-        jTabbedPane1.addTab("Complejo", jPanel2);
-
         label1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        label1.setText("Crea sede");
+        label1.setText("Sedes existentes");
 
         txtNombreSede.setText("EjemploSede");
 
@@ -374,7 +252,7 @@ public class Olimpiada extends javax.swing.JFrame {
         btnAddSede.setText("+");
         btnAddSede.addActionListener(this::btnAddSedeActionPerformed);
 
-        label4.setText("Ingrea el nombre de la sede a crear:");
+        label4.setText("Ingresa el nombre de la sede a crear");
 
         txtPresupuestoSede.setText("EjemploSede");
 
@@ -382,70 +260,92 @@ public class Olimpiada extends javax.swing.JFrame {
         btnCrearSede.setActionCommand("");
         btnCrearSede.addActionListener(this::btnCrearSedeActionPerformed);
 
+        label5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        label5.setText("Crea sede");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCrearSede, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtNombreSede, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtPresupuestoSede, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(label3, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lstComplejosSede, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(cbxListComplejosSede, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(label4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(txtNombreSede, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 3, Short.MAX_VALUE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnAddSede, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtPresupuestoSede, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(36, 36, 36))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(label3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(lstComplejosSede, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                                .addComponent(cbxListComplejosSede, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnAddSede, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCrearSede, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lstSedesCreadas, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(20, 20, 20)
-                    .addComponent(label4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(263, 263, 263)))
+                    .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(617, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbxListComplejosSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtNombreSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnAddSede)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 95, Short.MAX_VALUE)
-                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtNombreSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtPresupuestoSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPresupuestoSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lstComplejosSede, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(31, 31, 31)
-                .addComponent(btnCrearSede)
-                .addGap(197, 197, 197))
+                        .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(2, 2, 2)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbxListComplejosSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAddSede))
+                        .addGap(18, 18, 18)
+                        .addComponent(lstComplejosSede, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                        .addGap(11, 11, 11)
+                        .addComponent(btnCrearSede)
+                        .addGap(232, 232, 232))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lstSedesCreadas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(54, 54, 54)
-                    .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(431, Short.MAX_VALUE)))
+                    .addGap(33, 33, 33)
+                    .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(481, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab(" Sedes", jPanel1);
@@ -565,7 +465,7 @@ public class Olimpiada extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(cbxComisarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnEliminar))))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         lblParticipacionesComisario.getAccessibleContext().setAccessibleName("Comisario: participaciones:");
@@ -595,6 +495,10 @@ public class Olimpiada extends javax.swing.JFrame {
         btnAddComisario.setText("+");
         btnAddComisario.addActionListener(this::btnAddComisarioActionPerformed);
 
+        label33.setText("Ingresa título de evento");
+
+        txtEventoTitle.setText("2");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -616,21 +520,24 @@ public class Olimpiada extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createSequentialGroup()
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel5Layout.createSequentialGroup()
-                                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(label24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtNumParticipantes, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(jPanel5Layout.createSequentialGroup()
-                                            .addComponent(label26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(103, 103, 103)
-                                            .addComponent(label25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGap(124, 124, 124))
+                                    .addComponent(label26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(103, 103, 103)
+                                    .addComponent(label25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel5Layout.createSequentialGroup()
                                     .addComponent(cbxRolComisario, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(cbxEventoComsiarios, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                    .addComponent(cbxEventoComsiarios, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(btnAddComisario, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(lstComisariosSeleccionados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lstComisariosSeleccionados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(label24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtNumParticipantes, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(34, 34, 34)
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(label33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtEventoTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(btnCrearEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(210, 210, 210))
         );
@@ -642,7 +549,8 @@ public class Olimpiada extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(label22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
@@ -651,9 +559,11 @@ public class Olimpiada extends javax.swing.JFrame {
                         .addComponent(label23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(caFinalEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(138, Short.MAX_VALUE))
+                        .addContainerGap(167, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(txtNumParticipantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNumParticipantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEventoTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(11, 11, 11)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -672,11 +582,134 @@ public class Olimpiada extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Evento", jPanel5);
 
+        label7.setText("Ingresa el nombre del complejo a crear:");
+
+        txtNombreComplejo.setText("Ejemplocomplejo");
+        txtNombreComplejo.addActionListener(this::txtNombreComplejoActionPerformed);
+
+        label8.setText("Ingresa la localización del complejo a crear:");
+
+        txtLocalizacionComplejo.setText("Av. ...");
+        txtLocalizacionComplejo.addActionListener(this::txtLocalizacionComplejoActionPerformed);
+
+        label9.setText("Ingresa el nombre de un jefe de organización individual");
+
+        txtJefeIndividualComplejo.setText("Ejemplocomplejo");
+        txtJefeIndividualComplejo.addActionListener(this::txtJefeIndividualComplejoActionPerformed);
+
+        btnAreasComplejo.setText("+");
+        btnAreasComplejo.addActionListener(this::btnAreasComplejoActionPerformed);
+
+        label10.setText("Asigna las áreas a ocupar");
+
+        label11.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        label11.setText("Crea complejo");
+
+        btnAddEventoComplejo.setText("+");
+        btnAddEventoComplejo.addActionListener(this::btnAddEventoComplejoActionPerformed);
+
+        label18.setText("Selecciona eventos");
+
+        btnCrearComplejo.setText("Crear Complejo");
+        btnCrearComplejo.setActionCommand("");
+        btnCrearComplejo.addActionListener(this::btnCrearComplejoActionPerformed);
+
+        label30.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        label30.setText("Complejos creados");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label10, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(btnCrearComplejo))
+                    .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(cbxSelecAreasComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAreasComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lstSelectAreasComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(label7, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
+                        .addGap(46, 46, 46))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(txtNombreComplejo)
+                        .addComponent(txtLocalizacionComplejo, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(cbxSelecEventosComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAddEventoComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(label9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtJefeIndividualComplejo, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(label18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lstSelecEventosComplejo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label30, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lstComplejosCreados, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(label11, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(627, Short.MAX_VALUE)))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(label30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtNombreComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17)
+                        .addComponent(label9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtJefeIndividualComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtLocalizacionComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lstComplejosCreados, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(1, 1, 1)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxSelecEventosComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAddEventoComplejo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lstSelecEventosComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(label10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbxSelecAreasComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAreasComplejo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lstSelectAreasComplejo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addComponent(btnCrearComplejo)
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(30, 30, 30)
+                    .addComponent(label11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(484, Short.MAX_VALUE)))
+        );
+
+        jTabbedPane1.addTab("Complejo", jPanel2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 766, Short.MAX_VALUE)
                 .addGap(24, 24, 24))
@@ -685,8 +718,8 @@ public class Olimpiada extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
 
         pack();
@@ -695,6 +728,7 @@ public class Olimpiada extends javax.swing.JFrame {
     private void btnCrearSedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearSedeActionPerformed
         String nombreSede = txtNombreSede.getText();     
         String presupuestoSede = txtPresupuestoSede.getText();
+        String uuid = this.UUIDGenerador.generar();
         
         if (nombreSede.isBlank() || nombreSede.isBlank()) {
              JOptionPane.showMessageDialog(
@@ -705,6 +739,7 @@ public class Olimpiada extends javax.swing.JFrame {
             );
             return;
         }
+        
         double presupuesto = 0.0;
         try {
             presupuesto = Double.parseDouble(presupuestoSede);
@@ -719,7 +754,7 @@ public class Olimpiada extends javax.swing.JFrame {
             return;
         }
         
-        if (tempComplejos.isEmpty()) {
+        if (selectComplejosSede.isEmpty()) {
             JOptionPane.showMessageDialog(
                 null,
                 "debes seleccionar uno o más complejos.",
@@ -728,13 +763,10 @@ public class Olimpiada extends javax.swing.JFrame {
             );
             return;
         }
-        
-        String uuid = this.UUIDGenerador.generar();
-        
-        Sede nuevaSede = new Sede(uuid, presupuesto, tempComplejos, nombreSede);
-        
-        EventoController.crearSede(nuevaSede);
-        tempComplejos.clear();
+        EventoController.crearSede(new Sede(uuid, presupuesto, selectComplejosSede, nombreSede));
+        selectComplejosSede.clear();
+        lstComplejosSede.removeAll();
+        lstSedesCreadas.add("Nombre: "+nombreSede+" | Complejos: "+selectComplejosSede.size() );
     }//GEN-LAST:event_btnCrearSedeActionPerformed
 
     private void btnAddSedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddSedeActionPerformed
@@ -748,9 +780,13 @@ public class Olimpiada extends javax.swing.JFrame {
             return;
         }      
         
-        Complejo com = (Complejo) cbxListComplejosSede.getSelectedItem();        
-        tempComplejos.add(com);
+        Complejo com = (Complejo) cbxListComplejosSede.getSelectedItem();
+
+
+        if (selectComplejosSede.contains(com))return;
         
+        selectComplejosSede.add(com);
+        lstComplejosSede.add(com.getNombre());
     }//GEN-LAST:event_btnAddSedeActionPerformed
 
     private void btnCrearComisarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearComisarioActionPerformed
@@ -868,8 +904,8 @@ public class Olimpiada extends javax.swing.JFrame {
         }
         
         String nParticipantes = txtNumParticipantes.getText();
-        
-        if (nParticipantes == null || nParticipantes.isBlank()) {
+        String eventoTitle = txtEventoTitle.getText();
+        if (nParticipantes.isBlank() || eventoTitle.isBlank()) {
             JOptionPane.showMessageDialog(
                 null,
                 "debe ingresar el núemro de participantes",
@@ -925,7 +961,7 @@ public class Olimpiada extends javax.swing.JFrame {
             );
             return;
         }
-        EventoController.crearEvento(new Evento(uuidEventoCreating, inicio, fin,  minutosTotales, numeroParticipantes, comisarios));
+        EventoController.crearEvento(new Evento(eventoTitle, uuidEventoCreating, inicio, fin,  minutosTotales, numeroParticipantes, comisarios));
         
         lstComisariosSeleccionados.removeAll();
         tempComisarios.clear();
@@ -981,9 +1017,10 @@ public class Olimpiada extends javax.swing.JFrame {
     }//GEN-LAST:event_txtLocalizacionComplejoActionPerformed
 
     private void btnCrearComplejoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearComplejoActionPerformed
-        String jefeIndividual = txtJefeIndividual.getText();
+        String jefeIndividual = txtJefeIndividualComplejo.getText();
         String localizacionComplejo = txtLocalizacionComplejo.getText();
         String nombreComplejo = txtNombreComplejo.getText();
+        String uuid = this.UUIDGenerador.generar();
         
         if (jefeIndividual.isBlank() || localizacionComplejo.isBlank() || nombreComplejo.isBlank()) {
             JOptionPane.showMessageDialog(
@@ -994,9 +1031,9 @@ public class Olimpiada extends javax.swing.JFrame {
             );
             return;
         }
-        String uuid = this.UUIDGenerador.generar();
+        
        
-        if (tempAreas.isEmpty() || tempEventos.isEmpty()) {
+        if (selectAreasComplejo.isEmpty() || selectEventosComplejo.isEmpty()) {
             JOptionPane.showMessageDialog(
                 null,
                 "debes seleccionar al menos un área o evento.",
@@ -1006,37 +1043,41 @@ public class Olimpiada extends javax.swing.JFrame {
             return;
         }
         
+        EventoController.crearComplejo(
+                new Complejo(
+                        nombreComplejo,
+                        uuid,
+                        localizacionComplejo,
+                        jefeIndividual,
+                        selectAreasComplejo,
+                        selectEventosComplejo));        
         
-        Complejo newComplejo = new Complejo("", uuid, localizacionComplejo, jefeIndividual,
-                tempAreas, tempEventos);
         
-        EventoController.crearComplejo(newComplejo);        
-        tempAreas.clear();
-        tempEventos.clear();
-        lstAreasSeleccionadasComplejo.removeAll();
-        lstEventosComplejo.removeAll();
-        JOptionPane.showMessageDialog(
-                null,
-                "Se creò con èxito el complejo: " + uuid
-            );
+        selectAreasComplejo.clear();
+        selectEventosComplejo.clear();
+        lstSelectAreasComplejo.removeAll();
+        lstSelecEventosComplejo.removeAll();
+        
+        lstComplejosCreados.add("Nombre: "+nombreComplejo+" Localizacion: "+ localizacionComplejo );
+        JOptionPane.showMessageDialog(null, "Se creò con èxito el complejo: " + nombreComplejo);
     }//GEN-LAST:event_btnCrearComplejoActionPerformed
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
         
         List<Evento> tempEvento = EventoController.getEventos().getItems();
         
-        cbxEventosComplejo.removeAllItems();
+        cbxSelecEventosComplejo.removeAllItems();
         
         for (Evento evn : tempEvento) {
-            cbxEventosComplejo.addItem(evn);
+            cbxSelecEventosComplejo.addItem(evn);
         }
         
         List<Area> tempArea = EventoController.getAreas().getItems();
         
-        cbxAreasComplejo.removeAllItems();
+        cbxSelecAreasComplejo.removeAllItems();
         
         for (Area ar : tempArea) {
-            cbxAreasComplejo.addItem(ar);
+            cbxSelecAreasComplejo.addItem(ar);
         }
 
         List<Complejo> tempComplej = EventoController.getComplejos().getItems();
@@ -1051,7 +1092,7 @@ public class Olimpiada extends javax.swing.JFrame {
     }//GEN-LAST:event_jTabbedPane1StateChanged
 
     private void btnAddEventoComplejoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddEventoComplejoActionPerformed
-        if (cbxEventosComplejo.getSelectedIndex() == -1) {
+        if (cbxSelecEventosComplejo.getSelectedIndex() == -1) {
             JOptionPane.showMessageDialog(
                 null,
                 "Debes seleccionar al menos un evento para agregar",
@@ -1061,15 +1102,15 @@ public class Olimpiada extends javax.swing.JFrame {
             return;
         }
         
-        Evento evn = (Evento) cbxEventosComplejo.getSelectedItem();
-        if (!tempEventos.contains(evn)) {
-            tempEventos.add(evn);
-            lstEventosComplejo.add(evn.toString());
+        Evento evn = (Evento) cbxSelecEventosComplejo.getSelectedItem();
+        if (!selectEventosComplejo.contains(evn)) {
+            selectEventosComplejo.add(evn);
+            lstSelecEventosComplejo.add(evn.toString());
         }
     }//GEN-LAST:event_btnAddEventoComplejoActionPerformed
 
     private void btnAreasComplejoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAreasComplejoActionPerformed
-        if (cbxAreasComplejo.getSelectedIndex() == -1) {
+        if (cbxSelecAreasComplejo.getSelectedIndex() == -1) {
             JOptionPane.showMessageDialog(
                 null,
                 "Debes seleccionar al menos un evento para agregar",
@@ -1078,10 +1119,10 @@ public class Olimpiada extends javax.swing.JFrame {
             );
             return;
         }
-        Area narea = (Area)cbxAreasComplejo.getSelectedItem();
-        if (!tempAreas.contains(narea)) {
-            tempAreas.add(narea);
-            lstAreasSeleccionadasComplejo.add(narea.getLocalizacion());
+        Area narea = (Area)cbxSelecAreasComplejo.getSelectedItem();
+        if (!selectAreasComplejo.contains(narea)) {
+            selectAreasComplejo.add(narea);
+            lstSelectAreasComplejo.add(narea.getLocalizacion());
         }
     }//GEN-LAST:event_btnAreasComplejoActionPerformed
 
@@ -1104,7 +1145,7 @@ public class Olimpiada extends javax.swing.JFrame {
                 "Comisario: " + com.getNombre() + " | participaciones: 0"  + participaciones.size());
         for (Participacion p : participaciones) {            
             Comisario c = p.getComisarioParticipacion();            
-            lstComisariosParticipaciones.add("UUID Evento: " + p.getUuidEvento() + "Nombre comisario : " + c.getNombre() + " rol: " + p.getRol());
+            lstComisariosParticipaciones.add("Nombre comisario: " + c.getNombre() + " | rol: " + p.getRol() + " | UUID Evento: " + p.toString());
         }
     }//GEN-LAST:event_btnComisariosMostrarActionPerformed
 
@@ -1118,6 +1159,10 @@ public class Olimpiada extends javax.swing.JFrame {
         }
         JOptionPane.showMessageDialog(null, mensajeEliminar);
     }//GEN-LAST:event_btnEliminarAreaActionPerformed
+
+    private void txtJefeIndividualComplejoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJefeIndividualComplejoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtJefeIndividualComplejoActionPerformed
     
     
     
@@ -1164,14 +1209,14 @@ public class Olimpiada extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminarArea;
     private com.toedter.calendar.JCalendar caFinalEvento;
     private com.toedter.calendar.JCalendar caInicioEvento;
-    private javax.swing.JComboBox<com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Area> cbxAreasComplejo;
     private javax.swing.JComboBox<com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Area> cbxAreasEliminar;
     private javax.swing.JComboBox<com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Comisario> cbxComisarios;
     private javax.swing.JComboBox<com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Comisario> cbxComisariosMostrar;
     private javax.swing.JComboBox<com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Comisario> cbxEventoComsiarios;
-    private javax.swing.JComboBox<com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Evento> cbxEventosComplejo;
     private javax.swing.JComboBox<com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Complejo> cbxListComplejosSede;
     private javax.swing.JComboBox<com.mycompany.practicas.Semana4.Olimpiada.core.domain.enums.ComisarioRol> cbxRolComisario;
+    private javax.swing.JComboBox<com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Area> cbxSelecAreasComplejo;
+    private javax.swing.JComboBox<com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Evento> cbxSelecEventosComplejo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -1201,22 +1246,28 @@ public class Olimpiada extends javax.swing.JFrame {
     private java.awt.Label label28;
     private java.awt.Label label29;
     private java.awt.Label label3;
+    private java.awt.Label label30;
     private java.awt.Label label31;
     private java.awt.Label label32;
+    private java.awt.Label label33;
     private java.awt.Label label4;
+    private java.awt.Label label5;
     private java.awt.Label label7;
     private java.awt.Label label8;
     private java.awt.Label label9;
     private java.awt.Label lblParticipacionesComisario;
     private java.awt.List lstAreasLista;
-    private java.awt.List lstAreasSeleccionadasComplejo;
     private java.awt.List lstComisariosParticipaciones;
     private java.awt.List lstComisariosSeleccionados;
+    private java.awt.List lstComplejosCreados;
     private java.awt.List lstComplejosSede;
-    private java.awt.List lstEventosComplejo;
+    private java.awt.List lstSedesCreadas;
+    private java.awt.List lstSelecEventosComplejo;
+    private java.awt.List lstSelectAreasComplejo;
     private javax.swing.JTextField txtApellidoComisario;
     private javax.swing.JTextField txtDescripcionArea;
-    private javax.swing.JTextField txtJefeIndividual;
+    private javax.swing.JTextField txtEventoTitle;
+    private javax.swing.JTextField txtJefeIndividualComplejo;
     private javax.swing.JTextField txtLocalizacionArea;
     private javax.swing.JTextField txtLocalizacionComplejo;
     private javax.swing.JTextField txtNombreArea;

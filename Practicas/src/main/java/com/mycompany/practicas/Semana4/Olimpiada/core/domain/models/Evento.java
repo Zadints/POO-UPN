@@ -10,7 +10,8 @@ import java.util.List;
  * @author AUGUSTO RODRIGUEZ
  */
 public class Evento {
-    private String idEvento;
+    private String nombre;
+    private String uuidEvento;
     private LocalDateTime fechaInicia;
     private LocalDateTime fechaTermina;
     private long duracion;
@@ -18,8 +19,9 @@ public class Evento {
     private List<Comisario> comisarios;
 
 
-    public Evento(String idEvento, LocalDateTime fechaInicia, LocalDateTime fechaTermina, long duracion, int participantes, List<Comisario> comisarios) {
-        this.idEvento = idEvento;
+    public Evento(String nombre, String uuidEvento, LocalDateTime fechaInicia, LocalDateTime fechaTermina, long duracion, int participantes, List<Comisario> comisarios) {
+        this.nombre = nombre;
+        this.uuidEvento = uuidEvento;
         this.fechaInicia = fechaInicia;
         this.fechaTermina = fechaTermina;
         this.duracion = duracion;
@@ -28,8 +30,8 @@ public class Evento {
         
     }
 
-    public String getIdEvento() {
-        return idEvento;
+    public String getUuidEvento() {
+        return uuidEvento;
     }
 
     public LocalDateTime getFechaInicia() {
@@ -51,9 +53,13 @@ public class Evento {
     public List<Comisario> getComisarios() {
         return comisarios;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
     
     @Override
     public String toString() {
-        return this.idEvento + fechaInicia; 
+        return this.nombre; 
     }
 }

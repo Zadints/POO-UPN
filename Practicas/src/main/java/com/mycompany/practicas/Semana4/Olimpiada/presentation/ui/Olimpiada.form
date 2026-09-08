@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jTabbedPane1" pref="766" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
@@ -32,10 +32,10 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" min="-2" pref="540" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -113,7 +113,7 @@
                                       <Component id="label29" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                       <Component id="txtLocalizacionArea" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="15" max="32767" attributes="0"/>
+                                      <EmptySpace pref="44" max="32767" attributes="0"/>
                                       <Component id="label13" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="txtDescripcionArea" min="-2" pref="69" max="-2" attributes="0"/>
@@ -198,7 +198,6 @@
             <Component class="javax.swing.JButton" name="btnEliminarArea">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Eliminar &#xe1;rea seleccionada"/>
-                <Property name="actionCommand" type="java.lang.String" value="Eliminar &#xe1;rea seleccionada"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarAreaActionPerformed"/>
@@ -231,241 +230,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel2">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Complejo">
-                <Property name="tabTitle" type="java.lang.String" value="Complejo"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label7" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="txtNombreComplejo" min="-2" pref="203" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtLocalizacionComplejo" min="-2" pref="203" max="-2" attributes="0"/>
-                          <Component id="label8" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Component id="txtJefeIndividual" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Component id="label9" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="btnCrearComplejo" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="label18" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="cbxEventosComplejo" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnAddEventoComplejo" min="-2" pref="46" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lstEventosComplejo" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="label10" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="cbxAreasComplejo" min="-2" pref="142" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnAreasComplejo" min="-2" pref="46" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lstAreasSeleccionadasComplejo" min="-2" pref="265" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="365" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="label11" min="-2" pref="129" max="-2" attributes="0"/>
-                          <EmptySpace pref="758" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="label7" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="label8" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtNombreComplejo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtLocalizacionComplejo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="label9" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                              <Component id="txtJefeIndividual" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="label10" min="-2" pref="20" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cbxAreasComplejo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnAreasComplejo" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="lstAreasSeleccionadasComplejo" min="-2" pref="45" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="90" max="32767" attributes="0"/>
-                      <Component id="label18" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btnAddEventoComplejo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbxEventosComplejo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="lstEventosComplejo" min="-2" pref="45" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Component id="btnCrearComplejo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="label11" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="455" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="java.awt.Label" name="label7">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ingresa el nombre del complejo a crear:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtNombreComplejo">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ejemplocomplejo"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreComplejoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="java.awt.Label" name="label8">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ingresa la localizaci&#xf3;n del complejo a crear:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtLocalizacionComplejo">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Av. ..."/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLocalizacionComplejoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="java.awt.Label" name="label9">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ingresa el nombre de un jefe de organizaci&#xf3;n individual"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtJefeIndividual">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ejemplocomplejo"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cbxAreasComplejo">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Area&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnAreasComplejo">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAreasComplejoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="java.awt.Label" name="label10">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Asigna las &#xe1;reas a ocupar"/>
-              </Properties>
-            </Component>
-            <Component class="java.awt.Label" name="label11">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="12" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Crea complejo"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnCrearComplejo">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Crear Complejo"/>
-                <Property name="actionCommand" type="java.lang.String" value=""/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearComplejoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cbxEventosComplejo">
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Evento&gt;"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnAddEventoComplejo">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddEventoComplejoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="java.awt.List" name="lstEventosComplejo">
-            </Component>
-            <Component class="java.awt.Label" name="label18">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Selecciona eventos"/>
-              </Properties>
-            </Component>
-            <Component class="java.awt.List" name="lstAreasSeleccionadasComplejo">
-            </Component>
-          </SubComponents>
-        </Container>
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -478,84 +242,111 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="label2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btnCrearSede" min="-2" pref="151" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="label1" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
-                                      <Component id="txtNombreSede" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
-                                      <Component id="txtPresupuestoSede" alignment="1" min="-2" pref="203" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label3" pref="525" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="lstComplejosSede" min="-2" pref="218" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="cbxListComplejosSede" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="label4" max="32767" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="txtNombreSede" min="-2" pref="220" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnAddSede" min="-2" pref="42" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtPresupuestoSede" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
+                                          <Component id="label2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="label3" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="lstComplejosSede" alignment="0" max="32767" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="cbxListComplejosSede" min="-2" pref="170" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="btnAddSede" min="-2" pref="42" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="btnCrearSede" min="-2" pref="151" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="label1" min="-2" pref="129" max="-2" attributes="0"/>
+                          <Component id="lstSedesCreadas" min="-2" pref="284" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="label4" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="263" max="-2" attributes="0"/>
+                          <Component id="label5" min="-2" pref="129" max="-2" attributes="0"/>
+                          <EmptySpace pref="617" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                      <Component id="label1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                      <Component id="label3" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cbxListComplejosSede" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtNombreSede" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnAddSede" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="95" max="32767" attributes="0"/>
-                              <Component id="label2" min="-2" pref="20" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="label4" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtNombreSede" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="label2" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtPresupuestoSede" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txtPresupuestoSede" min="-2" max="-2" attributes="0"/>
+                              <Component id="label3" min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cbxListComplejosSede" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnAddSede" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="lstComplejosSede" pref="88" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Component id="btnCrearSede" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="lstComplejosSede" pref="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="label1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lstSedesCreadas" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="btnCrearSede" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                          <Component id="label4" min="-2" pref="20" max="-2" attributes="0"/>
-                          <EmptySpace pref="431" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="label5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="481" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -567,7 +358,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="12" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Crea sede"/>
+                <Property name="text" type="java.lang.String" value="Sedes existentes"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNombreSede">
@@ -602,7 +393,7 @@
             </Component>
             <Component class="java.awt.Label" name="label4">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Ingrea el nombre de la sede a crear:"/>
+                <Property name="text" type="java.lang.String" value="Ingresa el nombre de la sede a crear"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtPresupuestoSede">
@@ -618,6 +409,16 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearSedeActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="java.awt.List" name="lstSedesCreadas">
+            </Component>
+            <Component class="java.awt.Label" name="label5">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Crea sede"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -737,7 +538,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                      <EmptySpace pref="50" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -887,28 +688,32 @@
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="label24" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txtNumParticipantes" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="label26" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                                                  <Component id="label25" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="label26" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                                          <Component id="label25" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="cbxRolComisario" min="-2" pref="170" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="cbxEventoComsiarios" min="-2" pref="254" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btnAddComisario" min="-2" pref="59" max="-2" attributes="0"/>
                               </Group>
                               <Component id="lstComisariosSeleccionados" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="label24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtNumParticipantes" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="label33" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtEventoTitle" min="-2" pref="282" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                           <Component id="btnCrearEvento" min="-2" pref="166" max="-2" attributes="0"/>
                       </Group>
@@ -925,6 +730,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="label22" min="-2" max="-2" attributes="0"/>
                           <Component id="label24" min="-2" max="-2" attributes="0"/>
+                          <Component id="label33" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -934,10 +740,13 @@
                               <Component id="label23" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="caFinalEvento" min="-2" pref="123" max="-2" attributes="0"/>
-                              <EmptySpace pref="138" max="32767" attributes="0"/>
+                              <EmptySpace pref="167" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="txtNumParticipantes" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtNumParticipantes" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtEventoTitle" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="label26" min="-2" max="-2" attributes="0"/>
@@ -1049,6 +858,246 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
               </AuxValues>
+            </Component>
+            <Component class="java.awt.Label" name="label33">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ingresa t&#xed;tulo de evento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtEventoTitle">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="2"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Complejo">
+                <Property name="tabTitle" type="java.lang.String" value="Complejo"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="label10" min="-2" pref="288" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+                              <Component id="btnCrearComplejo" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="label8" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="cbxSelecAreasComplejo" min="-2" pref="251" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnAreasComplejo" min="-2" pref="46" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lstSelectAreasComplejo" alignment="0" min="-2" pref="303" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="label7" pref="315" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="txtNombreComplejo" max="32767" attributes="0"/>
+                              <Component id="txtLocalizacionComplejo" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="cbxSelecEventosComplejo" min="-2" pref="233" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="btnAddEventoComplejo" min="-2" pref="46" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="label9" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtJefeIndividualComplejo" alignment="0" max="32767" attributes="0"/>
+                              <Component id="label18" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                              <Component id="lstSelecEventosComplejo" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="label30" min="-2" pref="129" max="-2" attributes="0"/>
+                          <Component id="lstComplejosCreados" min="-2" pref="395" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="label11" min="-2" pref="129" max="-2" attributes="0"/>
+                          <EmptySpace pref="627" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="label30" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="label7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtNombreComplejo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                              <Component id="label9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtJefeIndividualComplejo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtLocalizacionComplejo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="label18" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lstComplejosCreados" min="-2" pref="202" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbxSelecEventosComplejo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAddEventoComplejo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lstSelecEventosComplejo" min="-2" pref="57" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="label10" min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cbxSelecAreasComplejo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAreasComplejo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lstSelectAreasComplejo" min="-2" pref="59" max="-2" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
+                      <Component id="btnCrearComplejo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="label11" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="484" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="java.awt.Label" name="label7">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ingresa el nombre del complejo a crear:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNombreComplejo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ejemplocomplejo"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreComplejoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="java.awt.Label" name="label8">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ingresa la localizaci&#xf3;n del complejo a crear:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtLocalizacionComplejo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Av. ..."/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLocalizacionComplejoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="java.awt.Label" name="label9">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ingresa el nombre de un jefe de organizaci&#xf3;n individual"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtJefeIndividualComplejo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ejemplocomplejo"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtJefeIndividualComplejoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbxSelecAreasComplejo">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Area&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnAreasComplejo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="+"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAreasComplejoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="java.awt.Label" name="label10">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Asigna las &#xe1;reas a ocupar"/>
+              </Properties>
+            </Component>
+            <Component class="java.awt.Label" name="label11">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Crea complejo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbxSelecEventosComplejo">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;com.mycompany.practicas.Semana4.Olimpiada.core.domain.models.Evento&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnAddEventoComplejo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="+"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddEventoComplejoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="java.awt.List" name="lstSelecEventosComplejo">
+            </Component>
+            <Component class="java.awt.Label" name="label18">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Selecciona eventos"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnCrearComplejo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear Complejo"/>
+                <Property name="actionCommand" type="java.lang.String" value=""/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearComplejoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="java.awt.Label" name="label30">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Complejos creados"/>
+              </Properties>
+            </Component>
+            <Component class="java.awt.List" name="lstSelectAreasComplejo">
+            </Component>
+            <Component class="java.awt.List" name="lstComplejosCreados">
             </Component>
           </SubComponents>
         </Container>
