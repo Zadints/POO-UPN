@@ -51,6 +51,23 @@ public class EventoUseCase {
         return "";
     }
     
+    public static void eliminarComplejo(Complejo com){
+        
+        Complejo complejoExiste = complejos.stream()
+            .filter(x -> x.getIdComplejo() == com.getIdComplejo())
+            .findFirst()
+            .orElse(null);
+        
+        if (complejoExiste == null) {
+            return;
+        }
+        complejos.remove(complejoExiste);
+        if (complejoExiste.getAreas() != null) {
+            areas.removeAll(complejoExiste.getAreas());
+        }
+        
+    }
+    
     public static GetAllDto getComisarios(){    
         return new GetAllDto(comisarios);
     }

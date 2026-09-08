@@ -20,7 +20,9 @@ public class EventoController {
     public static String eliminarArea(Area areaEliminar){
         return EventoUseCase.removeArea(areaEliminar);
     }
-    
+    public static void eliminarComplejo(Complejo com){
+        EventoUseCase.eliminarComplejo(com);
+    }
     
     public static GetAllDto getComisarios(){
         return EventoUseCase.getComisarios();
@@ -33,7 +35,7 @@ public class EventoController {
         return EventoUseCase.getAreas();
     }
     public static GetAllDto getComplejos(){
-        return  EventoUseCase.getComplejos();
+        return EventoUseCase.getComplejos();
     }
     public static GetAllDto getSedes(){
         return  EventoUseCase.getSedes();
