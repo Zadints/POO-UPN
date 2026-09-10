@@ -1,4 +1,3 @@
-<img width="4848" height="6984" alt="image" src="https://github.com/user-attachments/assets/f60d71f0-01d1-47a3-b9a2-3fc492ee7b83" /># POO UPN
 > Solo aquí se suben las asignaciones correspondientes a trabajos de POO de la universidad UPN.
 
 # IMPORTANTE
